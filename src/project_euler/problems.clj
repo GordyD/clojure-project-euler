@@ -29,8 +29,10 @@
 (defn problem4
   "See https://projecteuler.net/problem=4"
   []
-  (println " [!] Yet to be implemented!")
-)
+  (let [rn (range 1000 100 -1)]
+    (apply max (sort (filter
+      #(lib/palindrome? %)
+      (mapcat (fn [x] (map (fn [y] (* x y)) rn)) rn))))))
 
 (defn problem5
   "See https://projecteuler.net/problem=5"
