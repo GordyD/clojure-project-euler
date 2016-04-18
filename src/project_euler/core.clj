@@ -11,7 +11,7 @@
     (if
       (clojure.test/function? (symbol "project-euler.problems" (first args)))
       ;; then
-      (@(resolve (symbol "project-euler.problems" (first args))))
+      (println (@(resolve (symbol "project-euler.problems" (first args)))))
       ;; else
       (println " [x] Error:" (first args) "does not exist, please specify one that does to get output!")
     )

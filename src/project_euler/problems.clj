@@ -5,28 +5,25 @@
 (defn problem1
   "See https://projecteuler.net/problem=1"
   []
-  (println 
     (reduce + 
       (sort(distinct (concat
         (lib/multiplesOf 3 1000)
-        (lib/multiplesOf 5 1000)))))))
+        (lib/multiplesOf 5 1000))))))
 
 (defn problem2
   "See https://projecteuler.net/problem=2"
   []
-  (println 
     (reduce + 
       (filter 
         #(zero? (mod % 2))
-        (lib/fibonacciSequence 4000000 [1 2])))))
+        (lib/fibonacciSequence 4000000 [1 2]))))
 
 (defn problem3
   "See https://projecteuler.net/problem=3"
   []
-  (println 
     (apply max (filter
       #(lib/prime? %)
-      (lib/factorsOf 600851475143))))
+      (lib/factorsOf 600851475143)))
 )
 
 (defn problem4
