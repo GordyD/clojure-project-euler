@@ -30,8 +30,8 @@
 (defn prime?
   [x]
   (if (even? x) false
-    (let [base (num (int (Math/sqrt x)))]
+    (let [base (int (Math/sqrt x))]
       (loop [i 3]
         (if (> i base) true
-          (if (zero? (mod x i )) false
+          (if (zero? (mod x i)) false
             (recur (+ i 2))))))))
