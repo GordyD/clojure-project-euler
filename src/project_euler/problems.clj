@@ -17,5 +17,38 @@
   (println 
     (reduce + 
       (filter 
-        (fn [x] (= (mod x 2) 0))
+        #(zero? (mod % 2))
         (lib/fibonacciSequence 4000000 [1 2])))))
+
+(defn problem3
+  "See https://projecteuler.net/problem=3"
+  []
+  (println 
+    (apply max (filter
+      #(lib/prime? %)
+      (lib/factorsOf 600851475143))))
+)
+
+(defn problem4
+  "See https://projecteuler.net/problem=4"
+  []
+  (println " [!] Yet to be implemented!")
+)
+
+(defn problem5
+  "See https://projecteuler.net/problem=5"
+  []
+  (println " [!] Yet to be implemented!")
+)
+
+(defn problem6
+  "See https://projecteuler.net/problem=6"
+  []
+  (println " [!] Yet to be implemented!")
+)
+
+(defn problemX
+  "See https://projecteuler.net/problem=x"
+  []
+  (println " [!] Yet to be implemented!")
+)
